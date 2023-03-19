@@ -1,2 +1,5 @@
-# csd-340
-Course content for csd-340 at Bellevue University
+# CSD 340 Web Development with HTML and CSS
+
+## H2 Contributors
+* Cristy Cross
+* Brendan Bard
