@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description" content="Web page for CSD 340" />
+    <meta name="keywords" content="web development, education" />
+    <meta name="robots" content="nofollow" />
+    <meta http-equiv="author" content="Brendan Bard" />
+    <link href="Bard_Mod2_2.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript">
+        var urza = "Urza";
+        var mishra = "Mishra";
+        var tamiyo = "Tamiyo";
+        var towashi = "Towashi";
+        var phyrexia = "Phyrexia";
+        var karn = "Karn";
+        var memnarch = "Memnarch";
+        
+        function changeText(classname, text) {
+            var elements = document.getElementsByClassName(classname);
+            [].forEach.call(elements, function(element) {
+                element.innerHTML = text;
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: Javascript - Part 1</h1>
+        <div id="story">
+            <p>There is a story.</p>
+
+            <p><b>
+                Many eons ago there was a great wizard by the name of <span class="Urza">____</span>. So wise was he that all the mages of the Multiverse flocked to him for advice;
+                so powerful was he that only his brother <span class="Mishra">_____</span> stood as a potential rival. But <span class="Mishra">____</span> hated him bitterly, and soon a war began.
+            </b></p>
+            <p><b>
+                The war spanned decades and took untold lives. Worse, it allowed evil without compare to blossom. An awful affliction spread through <span class="Mishra">_____</span>'s armies—a black oil that changed everything in its path.
+            </b></p>
+            <p>
+                <span class="Tamiyo">______</span> knows this story. This is only the way it starts; there is more, much more. Years ago, she memorized every word. 
+                Afterward, just as <span class="Urza">____</span>'s metal heir had set himself upon the task of creating a plane, she'd set herself the task of recording it.
+                Like the oil, she'd found the story had seeped into her mind, begun to change it into something she did not like. Something dangerous.
+            </p>
+            <p>She'd sealed it away.</p>
+            <p>What a foolish thing to have done.</p>
+            <p>
+                Hovering over the neon skies of <span class="Towashi">_______</span>, she holds the scroll in hand. Oil seeps from her fingers onto the parchment.
+                Before long it will be impossible to read any of the characters—but that is no worry for someone like her, someone who knows these stories better than she knows her own.
+            </p>
+            <p>
+                A <span class="Phyrexia">________</span>n centurion bashes in the roof of a building. People scatter from it like ants. No—not like ants, whose carapaces lend them strength, who act as one in all things.
+                People could never be so reliable when trapped by flesh and mortal fear.
+                No, as they pour out from the building screaming, it is only the visceral that drives them, the corporeal—the falsest parts of their existence.
+            </p>
+            <p>
+                There is an iron ring binding the scroll. <span class="Tamiyo">______</span> slips it off. It plummets through the air, landing like so many other hunks of metal upon someone's unsuspecting crown.
+            </p>
+            <p>
+                The story continues.
+            </p>
+            <p>
+                The wizard <span class="Urza">____</span> creates an heir from pure, unvarnished metal. He names him <span class="Karn">____</span>.
+                The same spark of creation that birthed him burns brightly in his breast.
+                <span class="Karn">____</span>, too, must create. As a sculptor chipping at marble, he shapes his world.
+                When it is done—the creatures named and granted boons, the climate carefully crafted, the earth shaped and polished—he appoints his own successor, <span class="Memnarch"></span>, to oversee it.
+            </p>
+        </div>
+        <div id="buttons">
+            <button type="button" onclick="changeText('Urza', urza)">Urza</button>
+            <br>
+            <button type="button" onclick="changeText('Mishra', mishra)">Mishra</button>
+            <br>
+            <button type="button" onclick="changeText('Tamiyo', tamiyo)">Tamiyo</button>
+            <br>
+            <button type="button" onclick="changeText('Towashi', towashi)">Towashi</button>
+            <br>
+            <button type="button" onclick="changeText('Phyrexia', phyrexia)">Phyrexia</button>
+            <br>
+            <button type="button" onclick="changeText('Karn', karn)">Karn</button>
+            <br>
+            <button type="button" onclick="changeText('Memnarch', memnarch)">Memnarch</button>
+            <br>
+        </div>
+    </div>
+    <footer>
+        <p id="copyright">Bard 2023</p>
+        <p><a href="../index.html">Landing Page</a></p>
+    </footer>
+</body>
+
+</html>
