@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description" content="Web page for CSD 340" />
+    <meta name="keywords" content="web development, education" />
+    <meta name="robots" content="nofollow" />
+    <meta http-equiv="author" content="Brendan Bard" />
+    <link href="Bard_Mod2_2.css" type="text/css" rel="stylesheet" />
+    <script>
+         function displayImage(imageFile){
+            var largerImage = document.getElementById("mainImage");
+            var newNode = document.createElement("img");
+            newNode.id = "mainImage";
+            newNode.src = imageFile;
+            newNode.alt = "Large Image";
+            newNode.className = "mainImage";
+            newNode.style.width = "300px";
+            newNode.style.height = "200px";
+            largerImage.parentNode.replaceChild(newNode, largerImage);
+        }
+        function toggleBorder(htmlElement) {
+            if (htmlElement.style.borderStyle == "none") {
+                htmlElement.style.borderStyle = "solid";
+            } else {
+                htmlElement.style.borderStyle = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 10.3: Javascript - Part 1</h1>
+        <br />
+        <div>
+          <a href=#
+             onmouseover="cave.src='./images/cave_01.jpg';"
+             onmouseout= "cave.src='./images/cave_02.jpg';"
+          >
+            <img onclick="toggleBorder(this);" name="cave" src="./images/cave_02.jpg" style="border-style:none; border-width:5; border-color:red">
+          </a>
+        </div>
+        <br />
+        <div
+             onmouseover="this.style.color='red';"
+             onmouseout= "this.style.color='black';">
+    
+          Run your mouse over the image to change.
+          <br />
+    
+        </div>
+        <div>
+          <a href=#
+             onmouseover="moon.src='./images/moon_01.jpg';"
+             onmouseout= "moon.src='./images/moon_02.jpg';"
+          >
+            <img onclick="toggleBorder(this);" name="moon" src="./images/moon_02.jpg" style="border-style:none; border-width:5; border-color:red">
+          </a>
+        </div>
+        <br />
+        <div
+             onmouseover="this.style.color='red';"
+             onmouseout= "this.style.color='black';">
+    
+          Run your mouse over the image to change.
+          <br />
+          Right-click and select View Source for more details.
+        </div>
+    <footer>
+        <p id="copyright">Bard 2023</p>
+        <p><a href="../index.html">Landing Page</a></p>
+    </footer>
+</body>
+
+</html>
