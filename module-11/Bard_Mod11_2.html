@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description" content="Web page for CSD 340" />
+    <meta name="keywords" content="web development, education" />
+    <meta name="robots" content="nofollow" />
+    <meta http-equiv="author" content="Brendan Bard" />
+    <link href="Bard_Mod2_2.css" type="text/css" rel="stylesheet" />
+    <script>
+         list = [];
+
+         function addToList() {
+            list.push(document.getElementById('item').value); // Add item to list
+         }
+
+         function deleteLastItem() {
+            list.pop(); // Removes last item from list
+         }
+
+         function displayList() {
+            items = ""; // Items in list  
+            inner_html = ""; // Full Inner html
+            count = 1; // Item in list
+            list.forEach(element => {
+                items = items + "<li>Item " + count + " = " + element + "</li>";
+                count = count + 1; // Increment for list
+            })
+            inner_html = "<ul>" + items + "</ul>";
+            console.log(inner_html);
+            document.getElementById('list-content').innerHTML = inner_html;
+         }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 11.2: Javascript - Part 3</h1>
+        <input type="text" id="item">
+        <button type="button" onclick="addToList()">Add</button>
+        <button type="button" onclick="deleteLastItem()">Delete Last Entry</button>
+        <button type="button" onclick="displayList()">Display</button>
+        <div id="list-content">
+
+        </div>
+    </div>
+    <footer>
+        <p id="copyright">Bard 2023</p>
+        <p><a href="../index.html">Landing Page</a></p>
+    </footer>
+</body>
+
+</html>
