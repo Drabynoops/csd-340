@@ -1,0 +1,75 @@
+<!--Brendan Bard - Assignment Module 3.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description" content="Web page for CSD 340">
+    <meta name="keywords" content="web development, education">
+    <meta name="robots" content="nofollow">
+    <meta name="author" content="Brendan Bard">
+    <link href="Bard_Mod3_3.css" type="text/css" rel="stylesheet">
+    <script type="text/JavaScript">
+        let book_titles = [
+            "Atomic Habits",
+            "7 Habits of Highly Effective People",
+            "Clean Code",
+            "Eye of the World",
+            "The Great Hunt",
+            "Dragon Reborn",
+            "The Shadow Rising",
+            "The Fires of Heaven",
+            "The Official Pokemon Guide - Pokemon Platinum Version",
+            "Mega Man Legends insert booklet"
+        ]
+
+        function set_book_titles_html(list) {
+            let inner_html = "";
+            list.forEach(element => {
+                inner_html = inner_html + "<li>" + element + "</li>"
+            });
+            console.log(inner_html);
+            document.getElementById("favorite-books-list").innerHTML = inner_html; 
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        <div id="left-div">
+            <div id="favorite-books">
+                <h3>Top 10 Favorite Books</h3>
+                <ol id="favorite-books-list">
+                    <li>Atomic Habits</li>
+                    <li>7 Habits of Highly Effective People</li>
+                    <li>Clean Code</li>
+                    <li>Eye of the World</li>
+                    <li>The Great Hunt</li>
+                    <li>Dragon Reborn</li>
+                    <li>The Shadow Rising</li>
+                    <li>The Fires of Heaven</li>
+                    <li>The Official Pokemon Guide - Pokemon Platinum Version</li>
+                    <li>Mega Man Legends insert booklet</li>
+                </ol>
+            </div>
+           <button type="button" onclick="set_book_titles_html(book_titles)">Top to Bottom</button>
+           <button type="button" onclick="set_book_titles_html(book_titles.slice().reverse())">Bottom to Top</button>
+        </div>
+        <div id="right-div">
+            <div id="things-learned">
+                <h3>5 Things I've Learned Since the Course Started</h3>
+                <ul>
+                    <li>You can publish your repositories as branches of your GitHub Pages webpage</li>
+                    <li>There is a validator tool for HTML</li>
+                    <li>There is a validator tool for CSS</li>
+                    <li>I have not thought about my favorite books in order before</li>
+                    <li>My office chair hurts me when I sit on it too long</li>
+                </ul>
+            </div>
+        </div>
+        <div id="final-div">
+            <a href="../index.html">CSD 340 Landing Page</a>
+        </div>
+    </div>
+</body>
+
+</html>
